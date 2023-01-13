@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUs">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_pink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/caladea_regular"
+                android:gravity="center"
+                android:text="@string/m_j"
+                android:textColor="@color/brown"
+                android:textFontWeight="400"
+                android:textSize="24sp" />
+        </Toolbar>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:contentDescription="@string/about_us"
+            android:scaleType="fitCenter"
+            android:src="@drawable/about_us_l"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montaga_regular"
+            android:gravity="center"
+            android:text="@string/the_first_meet"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/_2018"
+            android:textColor="#BB9096"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/about_us"
+            android:src="@drawable/about_us_flowers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView9" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montaga_regular"
+            android:gravity="center"
+            android:lineHeight="17sp"
+            android:paddingHorizontal="15dp"
+            android:text="@string/leo_ipsum_justo_enim_augue_neque_eu_pulvinar_etiam_elit_quam_gravida_a_nec_mauris_eu_nulla_vulputate_vitae_nisl_massa_vulputate_tellus_sit_sit_integer_cras_nibh_sodales_sit_pharetra_tellus_elit_in"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView6" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montaga_regular"
+            android:gravity="center"
+            android:lineHeight="17sp"
+            android:paddingHorizontal="15dp"
+            android:text="@string/adipiscing_vulputate_platea_pharetra_et_purus_ultricies_aliquam_et_amet_quam_neque_pellentesque_id_risus_sit_diam_sit_tellus_iaculis_mi_ac_tempor_risus_aliquet_magna_sed_sem_et_pellentesque_ullamcorper_semper_libero_maecenas_viverra_dictum"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView10" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/about_us"
+            android:src="@drawable/about_us_ring_to_hand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView11" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montaga_regular"
+            android:gravity="center"
+            android:text="@string/engagement"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/_25_01_2022"
+            android:textColor="#BB9096"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <ImageView
+            android:id="@+id/imageVieW8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/about_us"
+            android:src="@drawable/about_us_flowers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView13" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montaga_regular"
+            android:gravity="center"
+            android:lineHeight="17sp"
+            android:paddingHorizontal="15dp"
+            android:text="@string/leo_ipsum_justo_enim_augue_neque_eu_pulvinar_etiam_elit_quam_gravida_a_nec_mauris_eu_nulla_vulputate_vitae_nisl_massa_vulputate_tellus_sit_sit_integer_cras_nibh_sodales_sit_pharetra_tellus_elit_in"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageVieW8" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montaga_regular"
+            android:gravity="center"
+            android:lineHeight="17sp"
+            android:paddingHorizontal="15dp"
+            android:text="@string/adipiscing_vulputate_platea_pharetra_et_purus_ultricies_aliquam_et_amet_quam_neque_pellentesque_id_risus_sit_diam_sit_tellus_iaculis_mi_ac_tempor_risus_aliquet_magna_sed_sem_et_pellentesque_ullamcorper_semper_libero_maecenas_viverra_dictum"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView14" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:contentDescription="@string/about_us"
+            android:src="@drawable/bouqette"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView15" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montaga_regular"
+            android:gravity="center"
+            android:text="@string/marriage"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView10"
+            tools:layout_editor_absoluteY="1223dp" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/_10_11_2022"
+            android:textColor="#BB9096"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/about_us"
+            android:src="@drawable/about_us_flowers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView17" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montaga_regular"
+            android:gravity="center"
+            android:lineHeight="17sp"
+            android:paddingHorizontal="15dp"
+            android:text="@string/leo_ipsum_justo_enim_augue_neque_eu_pulvinar_etiam_elit_quam_gravida_a_nec_mauris_eu_nulla_vulputate_vitae_nisl_massa_vulputate_tellus_sit_sit_integer_cras_nibh_sodales_sit_pharetra_tellus_elit_in"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView9" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/montaga_regular"
+            android:gravity="center"
+            android:lineHeight="17sp"
+            android:paddingHorizontal="15dp"
+            android:text="@string/adipiscing_vulputate_platea_pharetra_et_purus_ultricies_aliquam_et_amet_quam_neque_pellentesque_id_risus_sit_diam_sit_tellus_iaculis_mi_ac_tempor_risus_aliquet_magna_sed_sem_et_pellentesque_ullamcorper_semper_libero_maecenas_viverra_dictum"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView18" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

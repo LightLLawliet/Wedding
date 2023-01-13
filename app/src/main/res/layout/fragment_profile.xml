@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:duration="@android:integer/config_shortAnimTime"
+    android:interpolator="@android:anim/decelerate_interpolator"
+    android:fromAlpha="1"
+    android:toAlpha="0"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/light_pink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/caladea_regular"
+                android:gravity="center"
+                android:text="@string/m_j"
+                android:textColor="@color/brown"
+                android:textFontWeight="400"
+                android:textSize="24sp" />
+        </Toolbar>
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/profile__first_pink"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/diagram"
+                android:padding="10dp"
+                android:src="@drawable/diagram" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="26dp">
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:drawablePadding="13dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="12sp"
+                    android:text="@string/Attending"
+                    android:textColor="#050000"
+                    android:textSize="10sp"
+                    app:drawableStartCompat="@drawable/green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:drawablePadding="13dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="12sp"
+                    android:text="@string/not_attend"
+                    android:textColor="#050000"
+                    android:textSize="10sp"
+                    app:drawableStartCompat="@drawable/blue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView29" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:drawablePadding="13dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="12sp"
+                    android:text="@string/havent_registered"
+                    android:textColor="#050000"
+                    android:textSize="10sp"
+                    app:drawableStartCompat="@drawable/yellow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView30" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="38dp"
+            android:fontFamily="@font/worksans_bold"
+            android:letterSpacing="-0.02"
+            android:lineHeight="23sp"
+            android:text="@string/attendance"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout7" />
+
+        <TableLayout
+            android:id="@+id/table1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/table_pink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView32">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="@string/no"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="161"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="110"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Time"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="66"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="@string/status"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="161"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Desirae Culhane"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="110"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:lineHeight="14sp"
+                        android:text="@string/_29_mar_2022"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="7dp"
+                        android:text="10.42"
+                        android:textColor="#C4C4C4"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="66">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/attend__background"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="start"
+                        android:lineHeight="11sp"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="2dp"
+                        android:text="@string/attend"
+                        android:textColor="#0A5C1F"
+                        android:textSize="9sp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="2"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="161"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Jaylon Saris"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="110"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:lineHeight="14sp"
+                        android:text="@string/_29_mar_2022"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="7dp"
+                        android:text="08.42"
+                        android:textColor="#C4C4C4"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="66">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/attend__background"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="start"
+                        android:lineHeight="11sp"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="2dp"
+                        android:text="@string/attend"
+                        android:textColor="#0A5C1F"
+                        android:textSize="9sp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="3"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="161"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Ann Carder"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="110"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:lineHeight="14sp"
+                        android:text="@string/_28_mar_2022"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="7dp"
+                        android:text="@string/_16_56"
+                        android:textColor="#C4C4C4"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="66">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/attend__background"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="start"
+                        android:lineHeight="11sp"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="2dp"
+                        android:text="@string/attend"
+                        android:textColor="#0A5C1F"
+                        android:textSize="9sp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="4"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="161"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Justin Curtis"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="110"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:lineHeight="14sp"
+                        android:text="@string/_28_mar_2022"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="7dp"
+                        android:text="@string/_11_34"
+                        android:textColor="#C4C4C4"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="66">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/attend__background"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="start"
+                        android:lineHeight="11sp"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="2dp"
+                        android:text="@string/attend"
+                        android:textColor="#0A5C1F"
+                        android:textSize="9sp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="5"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="161"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Dulce Rosser"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="110"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:lineHeight="14sp"
+                        android:text="@string/_28_mar_2022"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="7dp"
+                        android:text="@string/_09_12"
+                        android:textColor="#C4C4C4"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="66">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/attend__background"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="start"
+                        android:lineHeight="11sp"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="2dp"
+                        android:text="@string/attend"
+                        android:textColor="#0A5C1F"
+                        android:textSize="9sp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="6"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="161"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Alena Saris"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="110"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:lineHeight="14sp"
+                        android:text="27 Mar 2022"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="7dp"
+                        android:text="13.10"
+                        android:textColor="#C4C4C4"
+                        android:textSize="6sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="66">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/attend__background"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="start"
+                        android:lineHeight="11sp"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="2dp"
+                        android:text="Dont Attend"
+                        android:textColor="#BE3A48"
+                        android:textSize="9sp" />
+                </LinearLayout>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/black" />
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="38dp"
+            android:fontFamily="@font/worksans_bold"
+            android:letterSpacing="-0.02"
+            android:lineHeight="23sp"
+            android:text="@string/attendance"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/table1" />
+
+        <TableLayout
+            android:id="@+id/table2"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/table_pink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView33">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="@string/no"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="239"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Message"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="James Dias"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="239"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Hey, there! You ready?"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="2"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Jordyn Vetrovs"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="239"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Can't wait to see ya!"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="3"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Ashlynn Baptista"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="239"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="Don't eat all donuts!!!"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="31"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:lineHeight="14sp"
+                    android:text="4"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_weight="50"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="James Calzoni"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="239"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="14sp"
+                    android:text="You have a one for me?"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/black" />
+
+        </TableLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
